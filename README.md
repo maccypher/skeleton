@@ -36,3 +36,7 @@ If your server was started by the command:
 		PORT=3333 npm run watch
 		
 the live reload server is listening on port ***3334***.
+
+## Credits / Thanks
+
+Thanks to [Mupat](https://github.com/mupat) for the [Gulp-Tasks](https://github.com/mupat/gulp-tasks) and the whole support for this little project.
