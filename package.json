@@ -1,0 +1,18 @@
+{
+  "name": "Skeleton",
+  "version": "0.0.1",
+  "description": "Dev boilerplate with Bower, Gulp and Live-Reload with JADE and LESS support",
+  "main": "index.js",
+  "scripts": {
+    "install": "./node_modules/.bin/bower update && ./node_modules/.bin/bower install",
+    "start": "./node_modules/.bin/gulp start",
+    "watch": "./node_modules/.bin/gulp watch"
+  },
+  "author": "MacCypher",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.8.7",
+    "gulp-tasks": "git://github.com/mupat/gulp-tasks",
+    "coffee-script": "~1.8.0"
+  }
+}

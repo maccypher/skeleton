@@ -1,0 +1,14 @@
+{
+  "name": "Skeleton",
+  "version": "0.0.1",
+  "authors": [
+    "MacCypher <maccypher@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.3.3"
+  }
+}
