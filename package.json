@@ -13,6 +13,7 @@
   "dependencies": {
     "gulp": "^3.8.7",
     "gulp-tasks": "git://github.com/mupat/gulp-tasks",
-    "coffee-script": "~1.8.0"
+    "coffee-script": "~1.8.0",
+    "bower": "~1.3.12"
   }
 }
