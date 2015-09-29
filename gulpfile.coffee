@@ -22,7 +22,7 @@ src =
   styles:
     index: "#{__dirname}/client/styles/main.less"
     files: "#{__dirname}/client/styles/**/*.less"
-  
+
 gulp.task 'build', [
   'build:scripts'
   'build:templates'
@@ -35,7 +35,7 @@ gulp.task 'build:scripts', [
 
 gulp.task 'build:scripts:app', ->
   gTasks.browserify.build src.scripts.main, dest.base
-  
+
 gulp.task 'build:templates', ->
   gTasks.jade.build src.templates.index, dest.base, lPort
   gTasks.jade.build src.templates.files, dest.templates
@@ -44,8 +44,8 @@ gulp.task 'build:styles', ->
   gTasks.less.build src.styles.index, dest.base
 
 gulp.task 'server', ->
-  gTasks.livereload.livereloadServer dest.base, lPort
-  gTasks.livereload.contentServer dest.base, cPort
+  gTasks.server.livereload dest.base, lPort
+  gTasks.server.content dest.base, cPort
 
 gulp.task 'start', ['build', 'server']
 
