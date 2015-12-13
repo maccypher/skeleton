@@ -9,6 +9,7 @@ bower = "#{__dirname}/bower_components"
 dest =
   base: base
   templates: "#{base}/templates"
+  assets: "#{base}/assets"
 
 src =
   scripts:
@@ -20,13 +21,11 @@ src =
   styles:
     index: "#{__dirname}/client/styles/main.less"
     files: "#{__dirname}/client/styles/**/*.less"
-  vendor: "#{__dirname}/client/vendor/**/*"
-
+  
 gulp.task 'build', [
   'build:scripts'
   'build:templates'
   'build:styles'
-  'build:vendor'
 ]
 
 gulp.task 'build:scripts', [
@@ -35,16 +34,13 @@ gulp.task 'build:scripts', [
 
 gulp.task 'build:scripts:app', ->
   gTasks.browserify.build src.scripts.main, dest.base
-
+  
 gulp.task 'build:templates', ->
   gTasks.jade.build src.templates.index, dest.base, lPort
   gTasks.jade.build src.templates.files, dest.templates
 
 gulp.task 'build:styles', ->
   gTasks.less.build src.styles.index, dest.base
-
-gulp.task 'build:vendor', ->
-  gTasks.misc.copy src.vendor, dest.assets
 
 gulp.task 'server', ->
   gTasks.server.livereload dest.base, lPort
