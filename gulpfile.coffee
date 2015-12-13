@@ -21,11 +21,13 @@ src =
   styles:
     index: "#{__dirname}/client/styles/main.less"
     files: "#{__dirname}/client/styles/**/*.less"
+  vendor: "#{__dirname}/client/vendor/**/*"
   
 gulp.task 'build', [
   'build:scripts'
   'build:templates'
   'build:styles'
+  'build:vendor'
 ]
 
 gulp.task 'build:scripts', [
@@ -41,6 +43,9 @@ gulp.task 'build:templates', ->
 
 gulp.task 'build:styles', ->
   gTasks.less.build src.styles.index, dest.base
+
+gulp.task 'build:vendor', ->
+  gTasks.misc.copy src.vendor, dest.assets
 
 gulp.task 'server', ->
   gTasks.server.livereload dest.base, lPort
